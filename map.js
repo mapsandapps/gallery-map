@@ -18,7 +18,8 @@ omnivore.csv('photos.csv')
       .setIcon(L.icon({
         iconUrl: marker.feature.properties.filename,
         iconSize: [50, 50],
-        iconAnchor: [25, 50]
+        iconAnchor: [25, 50],
+        className: 'photo-icon'
       }))
       .addTo(map);
   })
