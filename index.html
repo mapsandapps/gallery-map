@@ -8,13 +8,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 	<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/styles.css" />
 
-</head>
 
+<!--csv data (can switch to google sheets later)
+handle either relative or absolute paths
+npm
+marker cluster
+add gestures
+use flexbox so captions don't overlay images, but both can flex'
+animate show/hide
+clicking on the photo should dismiss (but not on caption)
+import csv (omnivore)-->
+
+</head>
 <body>
 
     <div id="map">
@@ -24,7 +35,7 @@
 			<img src="" id="image" onclick="dismissPhoto()">
 			<div id="caption"></div>
 		</div>
-		<button class="close" onclick="dismissPhoto()">X</button>
+		<button class="close" onclick="dismissPhoto()"><i class="fa fa-close fa-3x"></i></button>
 	</div>
     <script src="index.js"></script>
     <script src="map.js"></script>
