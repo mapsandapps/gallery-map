@@ -15,13 +15,18 @@ omnivore.csv('photos.csv')
       .on({
         click: markerClicked
       })
+      .setIcon(L.icon({
+        iconUrl: marker.feature.properties.filename,
+        iconSize: [50, 50],
+        iconAnchor: [25, 50]
+      }))
       .addTo(map);
   })
 });
 
 function markerClicked(e) {
   var properties = e.target.feature.properties;
-  console.log(properties.caption);
   document.querySelector('#photo').classList.remove('hidden');
   document.querySelector('#image').src = properties.filename;
+  document.querySelector('#caption').innerHTML = properties.caption;
 }

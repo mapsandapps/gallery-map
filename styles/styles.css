@@ -15,7 +15,8 @@ html, body, #map {
     margin: 20px;
     width: calc(100% - 40px);
     height: calc(100% - 40px);
-    background-color: #222; }
+    background-color: #222;
+    position: relative; }
   #photo .close {
     width: 40px;
     height: 40px;
@@ -24,7 +25,18 @@ html, body, #map {
     top: 0px;
     right: 0px; }
   #photo .image {
+    max-height: 100%;
     display: inline-block; }
+  #photo #caption {
+    font-size: 20px;
+    height: 30px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; }
 
 .hidden {
   display: none; }
