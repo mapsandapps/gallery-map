@@ -28,6 +28,6 @@ omnivore.csv('photos.csv')
 function markerClicked(e) {
   var properties = e.target.feature.properties;
   document.querySelector('#photo').classList.remove('hidden');
-  document.querySelector('#image').src = properties.filename;
+  document.querySelector('#image').style.backgroundImage = "url('" + properties.filename + "')";
   document.querySelector('#caption').innerHTML = properties.caption;
 }
