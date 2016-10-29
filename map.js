@@ -22,5 +22,6 @@ omnivore.csv('photos.csv')
 function markerClicked(e) {
   var properties = e.target.feature.properties;
   console.log(properties.caption);
-  // inject photo div into DOM with exit button (and gestures)
+  document.querySelector('#photo').classList.remove('hidden');
+  document.querySelector('#image').src = properties.filename;
 }
